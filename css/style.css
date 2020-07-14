@@ -78,14 +78,14 @@ html{
       .landing-margin{
           margin-top: 10rem;
       }
-      .margint5{
-        margin-top: 5rem;
+      .margint3{
+        margin-top: 3rem;
       }
    
       /* RESPONSIVE */
       @media only screen and (max-width: 600px) {
         .landing-margin{
-            margin-top: 3rem;
+            margin-top: 2.5rem;
         }
         .text-s-center{
             text-align: center;

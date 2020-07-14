@@ -1,8 +1,10 @@
-const CACHE_NAME = "TripnowV12";
+const CACHE_NAME = "TripnowV20";
 var urlsToCache = [
   "/",
   "/nav.html",
   "/index.html",
+  "/manifest.json",
+  "/favicon.ico",
   "/pages/home.html",
   "/pages/transport.html",
   "/pages/Trip.html",
@@ -42,6 +44,7 @@ var urlsToCache = [
   "/assets/image/st_peters_basilica.jpg",
   "/assets/image/transportation.png",
   "/assets/image/usa.png",
+  "/assets/icon/apple-icon-180x180.png",
   "/assets/icon/icon-512x512.png",
   "/assets/icon/icon-384x384.png",
   "/assets/icon/icon-256x256.png",
@@ -60,6 +63,7 @@ self.addEventListener("install",function(event){
 });
 
 self.addEventListener('fetch', function(event) {
+    console.log('Service Worker Fetch...');
 	event.respondWith(
 		caches.match(event.request, {cacheName:CACHE_NAME})
 		.then(function(response) {
