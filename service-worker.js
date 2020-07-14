@@ -1,4 +1,4 @@
-const CACHE_NAME = "TripnowV20";
+const CACHE_NAME = "Tripnow";
 var urlsToCache = [
   "/",
   "/nav.html",
@@ -63,7 +63,6 @@ self.addEventListener("install",function(event){
 });
 
 self.addEventListener('fetch', function(event) {
-    console.log('Service Worker Fetch...');
 	event.respondWith(
 		caches.match(event.request, {cacheName:CACHE_NAME})
 		.then(function(response) {
@@ -84,7 +83,7 @@ self.addEventListener("activate",function(event){
             return Promise.all(
                 cacheNames.map(function(cacheName){
                     if(cacheName != CACHE_NAME){
-                        console.log("ServiceWorker: cache "+ cacheName + "dihapus");
+                        console.log("ServiceWorker: cache "+ cacheName + " dihapus");
                         return caches.delete(cacheName);
                     }
                 })
