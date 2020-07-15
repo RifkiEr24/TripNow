@@ -1,4 +1,4 @@
-const CACHE_NAME = "TripnowV1";
+const CACHE_NAME = "TripnowV2";
 var urlsToCache = [
   "./",
   "./nav.html",
