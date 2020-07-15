@@ -1,10 +1,10 @@
-const CACHE_NAME = "TripnowV3";
+const CACHE_NAME = "TripnowV5";
 var urlsToCache = [
   "./",
   "./nav.html",
   "./index.html",
   "./manifest.json",
-  "./favicon.ico",
+  "./favicon.ico",  
   "./pages/home.html",
   "./pages/transport.html",
   "./pages/Trip.html",
